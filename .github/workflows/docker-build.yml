@@ -1,7 +1,7 @@
 name: Build Docker Image
 
 on:
-  push:         # 每次 push 就觸發
+  push:         # 每次 push 就觸發build&push
     branches: [ main ]
 
 jobs:
