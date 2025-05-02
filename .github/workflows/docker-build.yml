@@ -1,0 +1,16 @@
+name: Build Docker Image
+
+on:
+  push:         # 每次 push 就觸發
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build Docker Image
+      run: docker build -t sandrali/app1 .
