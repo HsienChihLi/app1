@@ -3,6 +3,8 @@ name: Build Docker Image
 on:
   push:         # 每次 push 就觸發build&push
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
